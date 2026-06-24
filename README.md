@@ -247,6 +247,7 @@ var partitionProps = await resilient.ExecuteAsync(
 | [PollyOpenAI](https://github.com/Swevo/PollyOpenAI) | Polly v8 for OpenAI .NET SDK |
 | [PollyMediatR](https://github.com/Swevo/PollyMediatR) | Polly v8 for MediatR |
 | [PollyHealthChecks](https://github.com/Swevo/PollyHealthChecks) | Polly v8 for ASP.NET Core Health Checks |
+| [PollySendGrid](https://github.com/Swevo/PollySendGrid) | Polly v8 for SendGrid |
 | [PollyBackoff](https://github.com/Swevo/PollyBackoff) | Polly v8 backoff helpers |
 
 ## License
