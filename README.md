@@ -255,6 +255,11 @@ var partitionProps = await resilient.ExecuteAsync(
 | [PollyHangfire](https://github.com/Swevo/PollyHangfire) | Hangfire IBackgroundJobClient |
 | [PollyBackoff](https://github.com/Swevo/PollyBackoff) | Polly v8 backoff helpers |
 
+## 💼 Need .NET consulting?
+
+The author of this package is available for consulting on **Polly v8 resilience**, **Azure cloud architecture**, and **clean .NET design**.
+
+**[→ solidqualitysolutions.com](https://www.solidqualitysolutions.com/)**
 ## License
 
 MIT © [Justin Bannister](https://github.com/Swevo)
