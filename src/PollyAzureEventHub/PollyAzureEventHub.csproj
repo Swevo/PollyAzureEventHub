@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net8.0;net9.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <PackageId>PollyAzureEventHub</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Justin Bannister</Authors>
+    <Copyright>Copyright (c) 2025 Justin Bannister</Copyright>
+    <Description>Polly v8 resilience pipelines for Azure Event Hubs — retry, timeout, and circuit-breaker for EventHubProducerClient and EventHubConsumerClient. Includes a built-in EventHubsTransientErrors predicate that leverages EventHubsException.IsTransient so retries are always safe and correct.</Description>
+    <PackageTags>polly;azure;azure-event-hubs;eventhubs;event-hubs;event-hub;messaging;producer;consumer;azure-messaging;resilience;retry;timeout;circuit-breaker;fault-tolerance;dotnet;aspnetcore;polly-v8;dependency-injection;csharp;nuget</PackageTags>
+    <PackageReleaseNotes>1.0.0: Initial release. ResilientEventHubProducerClient wraps EventHubProducerClient in a Polly v8 ResiliencePipeline. Includes EventHubsTransientErrors helper with pre-built ShouldHandle predicate using EventHubsException.IsTransient, plus TimeoutException and TaskCanceledException. Supports net6.0, net8.0, and net9.0.</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Swevo/PollyAzureEventHub</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Swevo/PollyAzureEventHub</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageIcon>icon.png</PackageIcon>
+
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Messaging.EventHubs" Version="5.*" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.*" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.*">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Polly.Core" Version="8.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

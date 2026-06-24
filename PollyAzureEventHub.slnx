@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PollyAzureEventHub/PollyAzureEventHub.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PollyAzureEventHub.Tests/PollyAzureEventHub.Tests.csproj" />
+  </Folder>
+</Solution>
